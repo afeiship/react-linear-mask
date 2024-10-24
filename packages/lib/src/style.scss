@@ -1,12 +1,15 @@
 .react-linear-mask {
+  --react-linear-mask-z-index: 10;
   --react-linear-mask-bg-angle: 0;
   --react-linear-mask-bg-color: linear-gradient(var(--react-linear-mask-bg-angle), rgba(255, 255, 255, 0) 0%,
-    rgb(255, 255, 255) 60%);
+    rgb(255, 255, 255) 100%);
 
   box-sizing: border-box;
   position: sticky;
   width: 100%;
   background: var(--react-linear-mask-bg-color);
+  flex-shrink: 0;
+  z-index: var(--react-linear-mask-z-index);
 
 
   // ------ direction modifiers ------
@@ -17,6 +20,7 @@
 
   &[data-direction="right"] {
     right: 0;
+    top: 0;
     --react-linear-mask-bg-angle: 90deg;
   }
 
@@ -27,6 +31,7 @@
 
   &[data-direction="left"] {
     left: 0;
+    top: 0;
     --react-linear-mask-bg-angle: 270deg;
   }
 }

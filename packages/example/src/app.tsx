@@ -3,14 +3,14 @@ import '@jswork/react-linear-mask/src/style.scss';
 
 function App() {
   return (
-    <div className="m-10 p-4 shadow bg-gray-100 text-gray-800 hover:shadow-md transition-all">
+    <div className="m-10 shadow bg-gray-100 text-gray-800 hover:shadow-md transition-all">
       <div className="badge badge-warning absolute right-0 top-0 m-4">
         Build Time: {BUILD_TIME}
       </div>
       <div className="wrap layout-abs-scrollable h-100">
-        <div className="scroll is-scrollable-y">
-          <ReactLinearMask className="debug-blue h-15" direction="top" />
-          <ul>
+        <div className="is-scrollable-y">
+          <ReactLinearMask className=" h-15" direction="top" />
+          <ul className="px-5">
             <li>菩提本无树，明镜亦非台，本来无一物，何处惹尘埃。空灵的境界，不染世俗，不受困于贪念囹圄。一份真情，种在心田，汲取日月精华，沐浴甘甜雨露，根深叶茂，葱茏浓郁。历经岁月沧桑，风虐霜寒，一年又一年，收了又收，几度轮回，滤掉了浅薄，滤掉了浮华，滤掉了嗔痴，滤掉了怨恨，滤掉了冷漠，剩下的大概就是慈悲了吧！轻如云，重如山，浅如白，深如黑，柔如水，坚如石，如天对地，雨露对花朵，无声无息，无私无欲。电影《致我们终将逝去的青春》
               里郑微在结尾说过这样一句话：“爱一个人应该像爱祖国，爱山川，爱河流……”咋一听，觉得够矫情，细想锥心不已。爱就是爱了，一个人的事，无关他人，无需回应，无需复返，正如山川的静默不语，河流的奔流不息。需要经过多少沉淀，才会有如此厚重绵延的感悟？有即是无，无即是有，有无之间，一切在心。
             </li>
@@ -33,7 +33,23 @@ function App() {
             </li>
             <li>人生，继续；禅意，幽幽。我，在路上。</li>
           </ul>
-          <ReactLinearMask className="debug-red h-15" direction="bottom" />
+          <ReactLinearMask className="h-15" direction="bottom" />
+        </div>
+      </div>
+      <hr className="my-4" />
+      <div className="wrap layout-abs-scrollable h-30 bg-green-400">
+        <div className="scroll is-scrollable-x fc">
+          <ReactLinearMask className="h-full w-15 z2" direction="left" />
+          <ul className="flex gap-5 flex-nowrap w-[1000px]">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => {
+              return (
+                <div key={i} className="card size-20 gap-5 text-white fcc bg-gray-600">
+                  abc
+                </div>
+              );
+            })}
+          </ul>
+          <ReactLinearMask className="h-full w-15 z2" direction="right" />
         </div>
       </div>
     </div>
